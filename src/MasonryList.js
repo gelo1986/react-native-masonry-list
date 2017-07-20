@@ -59,6 +59,10 @@ export type Props = {
   // issues with isLoading checks.
   onEndReached?: ?(info: { distanceFromEnd: number }) => void,
   contentContainerStyle?: any,
+  onScroll?: (event: Object) => void,
+  onScrollBeginDrag?: (event: Object) => void,
+  onScrollEndDrag?: (event: Object) => void,
+  onMomentumScrollEnd?: (event: Object) => void,
   onEndReachedThreshold?: ?number,
   scrollEventThrottle: number,
   renderScrollComponent: (props: Object) => ReactElement<any>,

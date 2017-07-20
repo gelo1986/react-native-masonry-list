@@ -144,22 +144,34 @@ export default class MasonryList extends Component {
   };
 
   _onScroll = event => {
+    if (this.props.onScroll) {
+      this.props.onScroll(event);
+    }
     this._listRefs.forEach(list => list._onScroll(event));
   };
 
   _onScrollBeginDrag = event => {
+    if (this.props.onScrollBeginDrag) {
+      this.props.onScrollBeginDrag(event);
+    }
     this._listRefs.forEach(
       list => list._onScrollBeginDrag && list._onScrollBeginDrag(event),
     );
   };
 
   _onScrollEndDrag = event => {
+    if (this.props.onScrollEndDrag) {
+      this.props.onScrollEndDrag(event);
+    }
     this._listRefs.forEach(
       list => list._onScrollEndDrag && list._onScrollEndDrag(event),
     );
   };
 
   _onMomentumScrollEnd = event => {
+    if (this.props.onMomentumScrollEnd) {
+      this.props.onMomentumScrollEnd(event);
+    }
     this._listRefs.forEach(
       list => list._onMomentumScrollEnd && list._onMomentumScrollEnd(event),
     );
